@@ -1,0 +1,150 @@
+/* import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap;700&display=swap');
+
+/* set all elements to border-box */
+* { box-sizing: border-box; }
+
+/* set baseline fonts, set dark background color, eliminate page padding/margin */
+body {
+  background-color: #91846d;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", serif;
+}
+
+#navigation {
+  width: 100%;
+  height: 3rem;
+  background-color: #DABDAD;
+}
+
+#navigation a {
+  font-size: 80%;
+  text-decoration: none;
+  padding-right: 1rem;
+}
+
+/* use cookie image as background to the title banner div */
+#titleBanner {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: none; /* (frenchtoast.jpg); */
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.7);
+}
+
+/* make recipe title large, white with a shadow, and positioned specifically */
+#titleBanner h1 {
+  font-family: "Londrina Solid", "Roboto Slab", serif;
+  color: #E5DD80;
+  text-transform: uppercase;
+  font-size: 500%;
+  padding: 0;
+  margin: 0 0 2vw 2vw;
+  position: absolute;
+  bottom: 50;
+  left: 50;
+  text-shadow: 0px 8px 8px #000000;
+  line-height: 80%;
+}
+
+#titleBanner h1.tp {
+  font-size: 600%;
+}
+
+#titleBanner h1.orange {
+  color: #FFC247;
+  
+}
+
+#titleBanner h1.tp6 {
+	color: black;
+}
+
+#titleBanner h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: black;
+}
+
+/* make the 3 recipe columns display using a flexbox method */
+#recipeColumns {
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #E5DD80;
+  padding-bottom: 6vh;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.7);
+}
+
+/* define the relative widths of the 3 columns in the flexbox */
+#recipeColumns div#ingredients { flex-basis: 20%; }
+#recipeColumns div#equipment { flex-basis: 20%; }
+#recipeColumns div#directions { flex-basis: 20%; }
+
+
+
+
+/* reduce the left-hand padding of the list items */
+#recipeColumns ul,
+#recipeColumns ol {
+  padding-left: 1.1em;
+}
+
+ul, ol {
+	display: block;
+}
+
+
+/* make section headers in the Londrina font */
+#recipeColumns h4 {
+  font-family: "Londrina Solid", "Roboto Slab", serif; 
+  text-transform: uppercase;
+  font-size: 130%;
+  margin: 0;
+  color: #D49A6A;
+}
+
+/* set the text color of the footer and the link in it */
+#footer,
+#footer a {
+  text-align: right;
+  color: #F0DF60;
+}
+
+/* for portrait layouts */
+@media screen and (orientation: portrait) {
+
+  /* remove the flexbox, making the internal DIVs full-width */
+  #recipeColumns {
+    padding: 1vh 2vh 2vh 2vh;
+    display: block;
+  }
+  
+  /* make the 3 lists larger */
+  #recipeColumns div {
+    position: relative;
+    margin: 2.5vh 0 5vh 0;
+    font-size: 120%;
+  }
+  
+}
+
+/* for portrait layouts that are narrow */
+@media screen and (orientation: portrait) and (max-width: 575px) {
+  
+  /* make the photo almost full-screen */
+  #titleBanner {
+    height: 98vh;
+  }
+  
+  /* make the title text huge */
+  #titleBanner h1 {
+    font-size: 1000%;
+    margin: 0 0 3vh 3vh;
+  }
+  
+}
